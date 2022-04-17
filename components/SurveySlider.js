@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Progress from "../components/Progress";
 import styles from "../styles/survey.module.css";
