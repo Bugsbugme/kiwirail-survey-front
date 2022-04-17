@@ -1,0 +1,51 @@
+export const SliderData = [
+  {
+    title: "TranzAlpine",
+    width: "3840",
+    height: "2500",
+    offset: 5,
+    image: "/img/TranzAlpine_opt.jpg",
+  },
+  {
+    title: "Kaitaki approaching Allports Island",
+    width: "3000",
+    height: "1993",
+    offset: 3,
+    image: "/img/Interislander_opt.jpg",
+  },
+  {
+    title: "Hoist",
+    width: "3840",
+    height: "2560",
+    offset: 3,
+    image: "/img/Hoist_opt.jpg",
+  },
+  {
+    title: "Northern Explorer",
+    width: "3840",
+    height: "2607",
+    offset: 2,
+    image: "/img/Northern-Explorer_opt.jpg",
+  },
+  {
+    title: "DL locomotives depart Port of Tauranga",
+    width: "1417",
+    height: "945",
+    offset: 0,
+    image: "/img/DL-locomotives_opt.jpg",
+  },
+  {
+    title: "Coastal Pacific",
+    width: "3450",
+    height: "1910",
+    offset: 0,
+    image: "/img/Coastal-Pacific_opt.jpg",
+  },
+  {
+    title: "Freight train on the Main North Line",
+    width: "3840",
+    height: "2560",
+    offset: 7,
+    image: "/img/Freight-train_opt.jpg",
+  },
+];

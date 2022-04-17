@@ -1,0 +1,74 @@
+.nav_bar {
+  grid-area: nav-bar;
+  width: 100%;
+  height: 96px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 2rem;
+}
+
+.nav_item {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: auto;
+  padding: 14px 20px;
+  padding-bottom: 2rem;
+}
+
+.nav_item::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  height: 0;
+  width: calc(100% - 40px);
+  content: "";
+  background-color: #f37021;
+  -webkit-transition: height 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0.1s;
+  transition: height 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0.1s;
+}
+
+.nav_item:hover::after {
+  height: 5px;
+}
+
+.kiwirail_logo {
+  width: auto;
+  height: 100%;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 685px) {
+  .nav_bar {
+    grid-area: nav-bar;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  .nav_item {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-block;
+    margin: auto;
+    margin-top: 0;
+    padding: 0 10px;
+    padding-bottom: 0;
+  }
+
+  .kiwirail_logo {
+    width: auto;
+    height: 8vh;
+    margin-right: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
