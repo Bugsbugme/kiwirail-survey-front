@@ -70,8 +70,8 @@ export default function SurveySlider({ data }) {
             />
             <p>Would you like us to contact you about any of the feedback you've given today? (optional)</p>
             <div className={styles.email_container}>
-              <input type="text" name="Name" id="user-name" />
-              <input type="email" name="Email" id="user-email" />
+              <input type="text" name="Name" id="user-name" placeholder="Name" />
+              <input type="email" name="Email" id="user-email" placeholder="Email" />
             </div>
           </form>
         </div>
