@@ -1,6 +1,8 @@
 .index {
   grid-area: bottom-section;
   width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
   max-width: fit-content;
   display: flex;
   flex-direction: column;
@@ -59,8 +61,8 @@
     margin-bottom: 10px;
   }
 
-  .index .button_container {
-    justify-content: center;
+  .index button.button_active a {
+    font-size: 1.1rem;
   }
 }
 

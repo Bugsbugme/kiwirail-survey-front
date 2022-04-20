@@ -13,7 +13,7 @@
 
 .progress_bar_container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 5px;
 }
 
@@ -38,32 +38,27 @@
 }
 
 .survey {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(60vh, auto) auto;
-  gap: 0px 0px;
-  grid-template-areas:
-    "middle-top-section"
-    "middle-bottom-section";
   grid-area: middle-section;
-  justify-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .survey_slider {
   display: flex;
-  position: relative;
   align-items: center;
 }
 
 .survey_slide {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   width: 90%;
   max-width: fit-content;
-  height: 100%;
+  height: 80%;
   position: absolute;
   opacity: 0;
   transition: 300ms opacity ease-in-out;
@@ -77,18 +72,17 @@
 }
 
 .question_container {
-  grid-area: middle-top-section;
   width: 100%;
-  height: 100%;
   display: flex;
-  margin: 15px auto auto auto;
+  margin: 15px auto 15px auto;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
 .question_body {
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .question_body p {
@@ -100,7 +94,6 @@
 }
 
 .answer_container {
-  grid-area: middle-bottom-section;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -122,11 +115,11 @@
 .complete_page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
   width: 90%;
   max-width: fit-content;
+  height: 80%;
   margin: auto;
   position: absolute;
   opacity: 0;
@@ -141,22 +134,15 @@
 }
 
 .complete_container {
-  grid-area: middle-top-section;
-  height: 100%;
   width: 100%;
   display: flex;
-  margin: 15px auto auto auto;
+  margin: auto 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.complete_body {
-  margin-top: auto;
-}
-
 .complete_heading {
-  margin-bottom: 10px;
   font-size: 1.4rem;
   font-weight: bold;
   color: #f37021;
@@ -164,24 +150,22 @@
 }
 
 .feedback_container {
-  grid-area: middle-bottom-section;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px auto auto auto;
 }
 
 .feedback_container p {
+  width: 100%;
   font-weight: bold;
+  margin: 5px 0;
 }
 
 .feedback_body {
   width: 100%;
   height: 130px;
   padding: 5px;
-  margin-bottom: 5px;
   border-color: #f37021;
   border-width: 2px;
   border-style: solid;
@@ -201,7 +185,7 @@
   width: 49.5%;
   height: 30px;
   padding: 5px;
-  margin-top: 5px;
+  margin-bottom: 5px;
   border-color: #f37021;
   border-width: 2px;
   border-style: solid;
@@ -210,10 +194,12 @@
 }
 
 .button_container {
-  grid-area: bottom-section;
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin: 20px;
+  z-index: 3;
 }
 
 .button_container button {
@@ -232,8 +218,22 @@
   background-color: #f37021;
 }
 
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 765px) {
   .progress_counter {
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .complete_heading {
+    font-size: 1.3rem;
+  }
+
+  .email_container {
+    flex-direction: column;
+  }
+
+  .email_container input {
+    width: 100%;
   }
 }

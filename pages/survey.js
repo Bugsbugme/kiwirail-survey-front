@@ -2,16 +2,15 @@ import { useGetSurvey } from "../hooks/GetSurvey";
 import { getSessionStorage } from "../hooks/BrowserStorage";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import Progress from "../components/Progress";
 import SurveySlider from "../components/SurveySlider";
 
 export default function Survey() {
   const survey = getSessionStorage("survey");
-  console.log(survey);
+  // console.log(survey);
   const api = `/api/${survey}-survey-questions`;
   const { error, data: data } = useGetSurvey(api);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>

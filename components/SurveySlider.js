@@ -7,8 +7,8 @@ export default function SurveySlider({ data }) {
   const [current, setCurrent] = useState(0);
   const length = data.data.length;
 
-  console.log(length);
-  console.log(current);
+  // console.log(length);
+  // console.log(current);
 
   const nextSlide = () => {
     if (current !== length) {
@@ -75,20 +75,20 @@ export default function SurveySlider({ data }) {
             </div>
           </form>
         </div>
+        <div className={styles.button_container}>
+          <button
+            className={current !== length - length ? `${styles.button_active}` : null}
+            onClick={current !== length - length ? prevSlide : null}>
+            Back
+          </button>
+          <button
+            // className={current < length - 1 ? `${styles.button_active}` : null}
+            className={styles.button_active}
+            onClick={nextSlide}>
+            {current < length - 1 ? <>Next</> : <>Finish</>}
+          </button>
+        </div>
       </section>
-      <div className={styles.button_container}>
-        <button
-          className={current !== length - length ? `${styles.button_active}` : null}
-          onClick={current !== length - length ? prevSlide : null}>
-          Back
-        </button>
-        <button
-          // className={current < length - 1 ? `${styles.button_active}` : null}
-          className={styles.button_active}
-          onClick={nextSlide}>
-          {current < length - 1 ? <>Next</> : <>Finish</>}
-        </button>
-      </div>
     </>
   );
 }
