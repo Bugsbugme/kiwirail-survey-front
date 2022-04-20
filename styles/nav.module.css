@@ -48,9 +48,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: auto;
-    padding: 0;
+    padding: 10px;
   }
 
   .nav_item {
@@ -60,15 +60,14 @@
     display: inline-block;
     margin: auto;
     margin-top: 0;
-    padding: 0 10px;
-    padding-bottom: 0;
+    padding: 0;
+    padding-right: 10px;
   }
 
   .kiwirail_logo {
     width: auto;
     height: 8vh;
     margin-right: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
 }
