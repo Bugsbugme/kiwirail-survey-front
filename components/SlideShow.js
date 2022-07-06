@@ -24,7 +24,7 @@ export default function SlideShow() {
       }
     }, interval);
     return () => clearInterval(loop);
-  }, [current]);
+  }, [current, length]);
 
   /* This is a conditional statement that checks if the SliderData is an array and if the length is
 greater than 0. If it is not an array or the length is less than 0, it will return an error message. */

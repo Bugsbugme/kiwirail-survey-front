@@ -7,6 +7,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>KiwiRail Survey</title>
+        <meta name="robots" content="noindex"></meta>
       </Head>
       <div className={styles.layout}>
         <Nav className={styles.nav} />
